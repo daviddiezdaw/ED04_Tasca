@@ -1,7 +1,10 @@
 package cuentas;
 /**
- *
+ * Aquesta classe mostra com es comporta un compte corrent del banc.
+ * Té mètodes per ingressar i retirar doblers.
+ * 
  * @author David Díez Sánchez
+ * @version 1.0
  */
 public class CCuenta {
 
@@ -26,14 +29,22 @@ public class CCuenta {
     {
         return getSaldo();
     }
-
+/** Aquest mètode ingressa doblers al compte corrent
+ * 
+ * @param cantidad
+ * @throws Exception 
+ */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
-
+/** Aquest mètode retira doblers del compte corrent
+ * 
+ * @param cantidad
+ * @throws Exception 
+ */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
